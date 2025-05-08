@@ -6,7 +6,14 @@ class Question {
     this.difficulty = difficulty; // data type number
   }
   shuffleChoices() {
-    //apply to the property choice using sort method and Math.random between -0 e 9.
-    this.choices = this.choices.sort(() => Math.random() - 0.9);
+    for (let i = 0; i < this.choices.length; i++) {
+      let randomIndex = Math.floor(Math.random() * this.choices.length);
+      let choiceToMove = this.choices[i];
+      this.choices.splice(i, 1);
+      this.choices.splice(randomIndex, 0, choiceToMove);
+
+      //apply to the property choice using sort method and Math.random between -0 e 9.
+      //this.choices = this.choices.sort(() => Math.random() - 0.5);
+    }
   }
 }

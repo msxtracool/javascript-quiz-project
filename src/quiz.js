@@ -9,15 +9,15 @@ class Quiz {
 
   getQuestion() {
     return this.questions[this.currentQuestionIndex]; // Array index already initialized by 0
-  } //Lari
+  } 
 
   moveToNextQuestion() {
     this.currentQuestionIndex += 1;
-  } //Dani
+  }
 
   shuffleQuestions() {
     this.questions = this.questions.sort(() => Math.random() - 0.9);
-  } //Dani
+  } 
 
   checkAnswer(answer) {
     const currentQuestion = this.getQuestion(); // Store answer input into a variable
